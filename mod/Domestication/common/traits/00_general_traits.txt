@@ -564,7 +564,7 @@ leader_trait_home_guard = {
 		TIER = 1
 	}
 	councilor_modifier = {
-		defense_armies_add = 1
+		planet_defense_armies_add = 1
 		planet_orbital_bombardment_damage = -0.1
 	}
 	leader_potential_add = {
@@ -590,7 +590,7 @@ leader_trait_home_guard_2 = {
 		TIER = 2
 	}
 	councilor_modifier = {
-		defense_armies_add = 2
+		planet_defense_armies_add = 2
 		planet_orbital_bombardment_damage = -0.2
 	}
 	leader_class = { commander }
@@ -746,10 +746,10 @@ leader_trait_warden = {
 		TIER = 1
 	}
 	planet_modifier = {
-		defense_armies_add = 4
+		planet_defense_armies_add = 4
 	}
 	sector_modifier = {
-		defense_armies_add = 2
+		planet_defense_armies_add = 2
 	}
 	leader_potential_add = {
 		trait_is_crisis_faction_check = no
@@ -777,10 +777,10 @@ leader_trait_warden_2 = {
 		TIER = 2
 	}
 	planet_modifier = {
-		defense_armies_add = 8
+		planet_defense_armies_add = 8
 	}
 	sector_modifier = {
-		defense_armies_add = 4
+		planet_defense_armies_add = 4
 	}
 	leader_class = { commander }
 	selectable_weight = @subclass_trait_weight

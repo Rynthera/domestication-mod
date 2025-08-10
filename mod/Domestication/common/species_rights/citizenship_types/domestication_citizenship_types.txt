@@ -52,30 +52,27 @@ citizenship_full = {
 		}
 		custom_tooltip = {
 			fail_text = too_alien
-			if = {
-				limit = {
-					from = {
-						NOT = { has_origin = origin_synthetic_fertility }
+			OR = {
+				is_same_species = from
+				from = {
+					AND = {
+						has_valid_civic = civic_selective_kinship
+						is_same_species_class = root
 					}
-					has_trait = trait_mechanical
 				}
-				OR = {
-					is_same_species = from
-					from = {
-						AND = {
-							has_valid_civic = civic_selective_kinship
-							is_same_species_class = root
-						}
+				from = {
+					NOR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
 					}
-					from = {
-						NOR = {
-							has_ethic = ethic_xenophobe
-							has_ethic = ethic_fanatic_xenophobe
-						}
-					}
+				}
+				from = {
+					has_origin = origin_synthetic_fertility
+					root = { has_trait = trait_mechanical }
 				}
 			}
 		}
+
 		custom_tooltip = {
 			fail_text = wrong_species_class
 			if = {

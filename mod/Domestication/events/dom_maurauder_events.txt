@@ -110,7 +110,7 @@ country_event = {
 				}
 				last_created_leader = {
 					save_global_event_target_as = great_khan_backup
-					add_trait = leader_trait_floret_immortal
+					add_trait = { trait = leader_trait_floret_immortal }
 					set_name = {
 						key = "domestication.khan_floret_name_set"
 						variable_string = "[great_khan_ruler.GetName]"
@@ -128,13 +128,13 @@ country_event = {
 				last_created_leader = {
 					save_event_target_as = new_floret
           save_global_event_target_as = great_khan_floret
-					add_trait = leader_trait_great_khan_floret
-					add_trait = leader_trait_floret_immortal
+					add_trait = { trait = leader_trait_great_khan_floret }
+					add_trait = { trait = leader_trait_floret_immortal }
 				}
 			}
 			floret_count_increment = yes
 
-			add_trait = leader_trait_great_khan_floret
+			add_trait = { trait = leader_trait_great_khan_floret }
 
 			floret_check_trans_and_rename = yes
 		}
@@ -334,5 +334,60 @@ country_event = {
 
 	option = {
 		name = dom_marauder.12.a
+	}
+}
+
+country_event = {
+	id = dom_marauder.13
+	title = "dom_marauder.13.name"
+	desc = "dom_marauder.13.desc"
+	picture = GFX_evt_aggressive_flora
+	
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+	
+	picture_event_data = {
+		portrait = event_target:new_floret
+	}
+
+	is_triggered_only = yes
+	
+	immediate = {
+		random_owned_leader = {
+			limit = {
+				leader_class = commander
+				can_obtain_new_floret = yes
+				NOT = { has_trait = leader_trait_marauder_floret }
+			}
+
+			save_event_target_as = new_owner
+
+			add_trait = { trait = leader_trait_marauder_floret }
+
+			floret_count_increment = yes
+		}
+
+		event_target:floret_country = {
+			create_leader = {
+				class = commander
+				species = event_target:marauder_neighbor_species
+				name = random
+				skill = 4
+				leader_age_min = 25
+				leader_age_max = 45
+				traits = {
+					trait = leader_trait_marauder_floret
+					trait = leader_trait_floret_immortal
+				}
+				effect = {
+					save_event_target_as = new_floret
+				}
+			}
+		}
+		floret_rename_single = yes
+	}
+
+	option = {
+		name = dom_marauder.13.a
 	}
 }

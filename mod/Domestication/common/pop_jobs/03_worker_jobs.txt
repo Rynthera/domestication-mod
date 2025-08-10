@@ -153,79 +153,8 @@ clerk = {
 	}
 
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_policy_flag = computation_core_production
-			}
-		}
-		planet_jobs_alloys_produces_mult = 0.005
-		planet_jobs_consumer_goods_produces_mult = 0.005
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_policy_flag = computation_core_stability
-			}
-		}
-		planet_jobs_unity_produces_mult = 0.005
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_policy_flag = computation_core_research
-			}
-		}
-		planet_jobs_physics_research_produces_mult = 0.005
-		planet_jobs_society_research_produces_mult = 0.005
-		planet_jobs_engineering_research_produces_mult = 0.005
-	}
-
-	overlord_resources = {
-		category = planet_corporate_franchising_meddling
-		produces = {
-			trigger = {
-				planet = {
-					has_planet_flag = has_franchise_headquarters
-				}
-			}
-			unity = 0.25
-		}
-	}
-
-	triggered_planet_modifier = {
 		potential = { always = yes }
 		planet_amenities_add = 300
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = planet
-			planet = {
-				exists = orbital_defence
-				orbital_defence = {
-					exists = starbase
-					starbase = {
-						has_starbase_building = ring_trade_hub
-					}
-				}
-			}
-		}
-		planet_amenities_add = 100
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_tradition = tr_mercantile_trickle_up_economics }
-		}
-		planet_amenities_add = 100
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -1474,6 +1403,7 @@ mortal_initiate = {
 			icon = mortal_initiate
 		}
 	}
+	can_be_automated = no
 
 	tags = { unity research amenities }
 
@@ -1630,7 +1560,7 @@ squire = {
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
-	triggered_planet_pop_group_modifier = {
+	triggered_planet_pop_group_modifier_for_all = {
 		potential = {
 			exists = planet
 			planet = {

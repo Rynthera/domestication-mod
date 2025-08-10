@@ -253,7 +253,7 @@ ship_event = {
 		if = {
 			limit = { owner = { is_domesticator_or_full_protectorate = no } }
 			leader = {
-				add_trait = leader_trait_brainslug
+				add_trait = { trait = leader_trait_brainslug }
 			}
 		}
 		owner = {
@@ -316,7 +316,7 @@ ship_event = {
 								}
 							}
 						}
-						add_trait = leader_trait_brainslug
+						add_trait = { trait = leader_trait_brainslug }
 					}
 				}
 				random_owned_leader = {
@@ -331,7 +331,7 @@ ship_event = {
 							}
 						}
 					}
-					add_trait = leader_trait_brainslug
+					add_trait = { trait = leader_trait_brainslug }
 				}
 				country_event = { id = distar.174 } #Pool leaders get trait
 				country_event = { id = distar.175 } #Unrest is generated
@@ -529,7 +529,7 @@ country_event = { #New leaders get Brainslug Trait
 							factor = 2
 							has_ethic = ethic_xenophile
 						}
-						add_trait = leader_trait_brainslug
+						add_trait = { trait = leader_trait_brainslug }
 					}
 				}
 				break = yes
@@ -678,10 +678,10 @@ ship_event = {
 			CATCH_PHRASE = caretaker_leader_catch_phrase
 		}
 		last_created_leader = {
-			add_trait = subclass_official_governor
-			add_trait = leader_trait_govenor_caretaker
-			add_trait = leader_trait_intellectual
-			add_trait = leader_trait_settler
+			add_trait = { trait = subclass_official_governor }
+			add_trait = { trait = leader_trait_govenor_caretaker }
+			add_trait = { trait = leader_trait_intellectual }
+			add_trait = { trait = leader_trait_settler }
 			save_event_target_as = caretaker_leader_tar
 			set_age = 709
 		}
@@ -777,10 +777,10 @@ ship_event = {
 			}
 		}
 		last_created_leader = {
-			add_trait = trait_ruler_eye_for_talent
-			add_trait = leader_trait_spark_of_genius_2
-			add_trait = subclass_scientist_councilor
-			add_trait = leader_trait_expertise_computing_2
+			add_trait = { trait = trait_ruler_eye_for_talent }
+			add_trait = { trait = leader_trait_spark_of_genius_2 }
+			add_trait = { trait = subclass_scientist_councilor }
+			add_trait = { trait = leader_trait_expertise_computing_2 }
 			set_gender = female
 			save_global_event_target_as = stranded_scientist_leader
 			exile_leader_as = stranded_scientist_leader
@@ -832,8 +832,8 @@ ship_event = {
 					target = event_target:stranded_scientist_leader
 					class = scientist
 					effect = {
-						add_trait = leader_trait_floret_immortal
-						add_trait = leader_trait_stranded_floret
+						add_trait = { trait = leader_trait_floret_immortal }
+						add_trait = { trait = leader_trait_stranded_floret }
 						save_event_target_as = new_floret
 						save_global_event_target_as = stranded_scientist_leader_clone
 					}
@@ -859,10 +859,10 @@ ship_event = {
 
 		random_list = {
 			1 = {
-				leader = { add_trait = leader_trait_adaptable }
+				leader = { add_trait = { trait = leader_trait_adaptable } }
 			}
 			1 = {
-				leader = { add_trait = leader_trait_paranoid }
+				leader = { add_trait = { trait = leader_trait_paranoid } }
 			}
 		}
 

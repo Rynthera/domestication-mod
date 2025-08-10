@@ -68,8 +68,8 @@ leader_event = {
         }
         last_created_leader = {
           save_event_target_as = new_floret
-          add_trait = leader_trait_blorgfriend_floret
-          add_trait = leader_trait_floret_immortal
+          add_trait = { trait = leader_trait_blorgfriend_floret }
+          add_trait = { trait = leader_trait_floret_immortal }
         }
       }
       owner = { country_event = { id = dom_paragon.2 } }
@@ -136,8 +136,8 @@ leader_event = {
 		}
         last_created_leader = {
           save_event_target_as = new_floret
-          add_trait = leader_trait_blorgfriend_floret
-          add_trait = leader_trait_floret_immortal
+          add_trait = { trait = leader_trait_blorgfriend_floret }
+          add_trait = { trait = leader_trait_floret_immortal }
         }
       }
       owner = { country_event = { id = dom_paragon.2 } }
@@ -179,7 +179,7 @@ country_event = {
 			## Up to 2 florets - for the moment
 			floret_count_increment = yes
 
-			add_trait = leader_trait_blorgfriend_floret
+			add_trait = { trait = leader_trait_blorgfriend_floret }
 
 			#event_target:new_floret = {
 			#	set_name = "NAME_S8751"
@@ -220,8 +220,8 @@ leader_event = {
 	  }
       last_created_leader = {
         save_event_target_as = new_floret
-        add_trait = leader_trait_floret_immortal
-        add_trait = leader_trait_militarist_2_floret
+        add_trait = { trait = leader_trait_floret_immortal }
+        add_trait = { trait = leader_trait_militarist_2_floret }
       }
 
     }
@@ -297,7 +297,7 @@ country_event = {
 			## Up to 2 florets - for the moment
 			floret_count_increment = yes
 
-			add_trait = leader_trait_militarist_1_floret
+			add_trait = { trait = leader_trait_militarist_1_floret }
 
 			owner = {
 				floret_rename_single = yes
@@ -350,7 +350,7 @@ country_event = {
 			## Up to 2 florets - for the moment
 			floret_count_increment = yes
 
-			add_trait = leader_trait_militarist_1_floret
+			add_trait = { trait = leader_trait_militarist_1_floret }
 
 			owner = {
 				floret_rename_single = yes
@@ -414,8 +414,8 @@ country_event = {
   			}
 				last_created_leader = {
 					save_event_target_as = new_floret
-          add_trait = leader_trait_floret_immortal
-          add_trait = leader_trait_caretaker_floret
+          add_trait = { trait = leader_trait_floret_immortal }
+          add_trait = { trait = leader_trait_caretaker_floret }
 				}
 			}
 
@@ -517,7 +517,7 @@ country_event = {
 
 	desc = dom_paragon.247.desc
 
-	picture = GFX_evt_gladiators
+	picture = GFX_evt_individualistic_machines_1
 	show_sound = event_default
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -542,7 +542,7 @@ country_event = {
 			## Up to 2 florets - for the moment
 			floret_count_increment = yes
 
-			add_trait = leader_trait_caretaker_floret
+			add_trait = { trait = leader_trait_caretaker_floret }
 
 			owner = {
 				floret_rename_single = yes
@@ -643,11 +643,11 @@ country_event = { # xenophile 1
 			CATCH_PHRASE = xenophile1_catch_phrase
 		}
 		last_created_leader = {
-			add_trait = subclass_commander_admiral
-			add_trait = leader_trait_guerilla_tactics
-			add_trait = leader_trait_slipshod
-			add_trait = leader_trait_trickster
-			add_trait = leader_trait_corsair
+			add_trait = { trait = subclass_commander_admiral }
+			add_trait = { trait = leader_trait_guerilla_tactics }
+			add_trait = { trait = leader_trait_slipshod }
+			add_trait = { trait = leader_trait_trickster }
+			add_trait = { trait = leader_trait_corsair }
 			set_age = 33
 		}
 	}
@@ -707,8 +707,8 @@ country_event = { # xenophile 1
   			}
 				last_created_leader = {
 					save_event_target_as = new_floret
-          add_trait = leader_trait_floret_immortal
-          add_trait = leader_trait_xenophile_1_floret
+          add_trait = { trait = leader_trait_floret_immortal }
+          add_trait = { trait = leader_trait_xenophile_1_floret }
 				}
 			}
 
@@ -780,7 +780,7 @@ country_event = {
 			## Up to 2 florets - for the moment
 			floret_count_increment = yes
 
-			add_trait = leader_trait_xenophile_1_floret
+			add_trait = { trait = leader_trait_xenophile_1_floret }
 
 			owner = {
 				floret_rename_single = yes
@@ -854,9 +854,9 @@ leader_event = {
 					}
 				}
 				event_target:keram_the_blorg = {
-					add_trait_no_notify = leader_trait_mining_focus
-					add_trait_no_notify = leader_trait_substance_abuser
-					add_trait_no_notify = leader_trait_melancholic
+					add_trait = { trait = leader_trait_mining_focus show_message = no }
+					add_trait = { trait = leader_trait_substance_abuser show_message = no }
+					add_trait = { trait = leader_trait_melancholic show_message = no }
 					set_owner = prev
 				}
 				hire_event_leader_message = {
@@ -959,11 +959,11 @@ country_event = { # militarist 2
 			CATCH_PHRASE = militarist2_catch_phrase
 		}
 		last_created_leader = {
-			add_trait = subclass_commander_general
-			add_trait = leader_trait_tzrynn_tithe
-			add_trait = leader_trait_disorganized
-			add_trait = leader_trait_butcher
-			add_trait = leader_trait_interrogator
+			add_trait = { trait = subclass_commander_general }
+			add_trait = { trait = leader_trait_tzrynn_tithe }
+			add_trait = { trait = leader_trait_disorganized }
+			add_trait = { trait = leader_trait_butcher }
+			add_trait = { trait = leader_trait_interrogator }
 			set_age = 28
 		}
 	}
@@ -1031,8 +1031,8 @@ country_event = { # militarist 2
 			}
 				last_created_leader = {
 					save_event_target_as = new_floret
-				    add_trait = leader_trait_floret_immortal
-				    add_trait = leader_trait_militarist_2_floret
+				    add_trait = { trait = leader_trait_floret_immortal }
+				    add_trait = { trait = leader_trait_militarist_2_floret }
 				}
 			}
 
@@ -1104,7 +1104,7 @@ country_event = {
 			## Up to 2 florets - for the moment
 			floret_count_increment = yes
 
-			add_trait = leader_trait_militarist_2_floret
+			add_trait = { trait = leader_trait_militarist_2_floret }
 
 			owner = {
 				floret_rename_single = yes

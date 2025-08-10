@@ -585,6 +585,22 @@ tech_food_processing_1 = {
 
 	weight_modifier = {
 		modifier = {
+			factor = 2
+			country_uses_food = yes
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_prosperity_adopt
+			country_uses_food = yes
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				num_districts = { type = district_farming value > 0 }
+				num_districts = { type = district_farming_uncapped value > 0 }
+			}
+		}
+		modifier = {
 			factor = 0.01
 			OR = {
 				is_machine_empire = yes
@@ -599,21 +615,14 @@ tech_food_processing_1 = {
 				any_owned_planet = {
 					OR = {
 						num_districts = { type = district_farming value > 0 }
-						num_districts = { type = district_rw_farming value > 0 }
+						num_districts = { type = district_farming_uncapped value > 0 }
 					}
 				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			OR = {
-				is_machine_empire = yes
-				is_lithoid_empire = yes
-				AND = {
-					is_individual_machine = yes
-					NOT = { has_country_flag = non_lithoid_subspecies }
-				}
-			}
+			country_uses_food = no
 		}
 		modifier = {
 			factor = 1.5
@@ -629,10 +638,6 @@ tech_food_processing_1 = {
 		modifier = {
 			factor = 2
 			has_relic = r_pox_sample
-		}
-		modifier = {
-			factor = 2
-			country_uses_bio_ships = yes
 		}
 	}
 
@@ -2274,10 +2279,6 @@ tech_cloning = {
 	prerequisites = { "tech_genome_mapping" }
 	weight = @tier2weight2
 
-	modifier = {
-		building_clone_vats_max = 1
-	}
-
 	potential = {
 		OR = {
 			is_machine_empire = no
@@ -2395,6 +2396,7 @@ tech_gene_seed_purification = {
 			is_machine_empire = yes
 			is_natural_design_empire = yes
 			is_individual_machine = yes
+			is_wilderness_empire = yes
 		}
 	}
 
@@ -4468,7 +4470,6 @@ tech_colonial_centralization = {
 
 	weight_modifier = {
 		factor = 4
-
 	}
 
 	ai_weight = {
@@ -5441,7 +5442,6 @@ tech_autocurating_vault = {
 		NOR = {
 			has_ethic = ethic_spiritualist
 			has_ethic = ethic_fanatic_spiritualist
-			has_valid_civic = civic_machine_servitor
 			is_wilderness_empire = yes
 		}
 	}
@@ -5895,7 +5895,14 @@ tech_federation_code = {
 	weight = @tier2weight1
 
 	potential = {
-
+		OR = {
+			# The tech can be given at the start of the game
+			days_passed = 0
+			# Or when you know someone you cna form a federation with
+			any_relation = {
+				can_form_federation_with_empire = yes
+			}
+		}
 	}
 
 	modifier = {
@@ -5928,10 +5935,6 @@ tech_federation_code = {
 			factor = 0.25
 			has_ethic = ethic_fanatic_xenophobe
 		}
-		modifier = {
-			factor = 0.01
-			is_diplomatic = no
-		}
 	}
 
 	ai_weight = {
@@ -5951,10 +5954,6 @@ tech_federation_code = {
 		modifier = {
 			factor = 0.25
 			has_ethic = ethic_fanatic_xenophobe
-		}
-		modifier = {
-			factor = 0.01
-			is_diplomatic = no
 		}
 	}
 }

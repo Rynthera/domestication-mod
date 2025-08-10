@@ -60,9 +60,7 @@ defined_text = { # Leader scope
     }
 		localization_key = ordinal_rd
 	}
-  text = {
-		localization_key = ordinal_th
-	}
+	default =  ordinal_th
 }
 
 defined_text = { # Country/leader/pop/species scope
@@ -145,9 +143,7 @@ defined_text = { # Country/leader/pop/species scope
 		}
 		localization_key = AQUATIC_neck
 	}
-	text = {
-		localization_key = neck_fallback
-	}
+	default =  neck_fallback
 }
 
 defined_text = { # Country/leader/pop/species scope
@@ -230,9 +226,7 @@ defined_text = { # Country/leader/pop/species scope
 		}
 		localization_key = AQUATIC_neck_plural
 	}
-	text = {
-		localization_key = neck_fallback_plural
-	}
+	default = neck_fallback_plural
 }
 
 defined_text = { # Country/leader/pop/species scope
@@ -315,7 +309,5 @@ defined_text = { # Country/leader/pop/species scope
 		}
 		localization_key = AQUATIC_eye_plural
 	}
-	text = {
-		localization_key = neck_fallback_plural
-	}
+	default = neck_fallback_plural
 }

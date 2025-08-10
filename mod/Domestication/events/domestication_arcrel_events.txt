@@ -26,11 +26,11 @@ country_event = {
 			CATCH_PHRASE = oracle_leader_catch_phrase
 		}
 		last_created_leader = {
-			add_trait = leader_trait_governor_oracle
-			add_trait = subclass_official_governor
-			add_trait = leader_trait_principled_2
-			add_trait = leader_trait_urbanist
-			add_trait = leader_trait_architectural_interest
+			add_trait = { trait = leader_trait_governor_oracle }
+			add_trait = { trait = subclass_official_governor }
+			add_trait = { trait = leader_trait_principled_2 }
+			add_trait = { trait = leader_trait_urbanist }
+			add_trait = { trait = leader_trait_architectural_interest }
 			save_global_event_target_as = oracle_leader
 			set_age = 5973
 		}
@@ -109,8 +109,8 @@ country_event = {
         }
         last_created_leader = {
           save_event_target_as = new_floret
-          add_trait = leader_trait_floret_immortal
-          add_trait = leader_trait_oracle_floret
+          add_trait = { trait = leader_trait_floret_immortal }
+          add_trait = { trait = leader_trait_oracle_floret }
         }
       }
 
@@ -181,7 +181,7 @@ country_event = {
 			## Up to 2 florets - for the moment
 			floret_count_increment = yes
 
-			add_trait = leader_trait_oracle_floret
+			add_trait = { trait = leader_trait_oracle_floret }
 
 			owner = {
 				floret_rename_single = yes

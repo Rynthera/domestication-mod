@@ -50,37 +50,96 @@ country_event = {
 				}
 				# If a modified species hasn't been created, create one
 				# and save them as an event target
-				if = {
-					limit = {
-						NOT = {
-							any_galaxy_species = {
-								has_species_flag = floret_species_of_species@event_target:old_species
-								has_species_flag = floret_species_of_empire@root.owner
-							}
-						}
-					}
-					create_species = {
-						is_mod = yes
-						name = this
-						plural = this
-						class = this
-						portrait = this
-						traits = this
-						can_be_modified = this
-						homeworld = this
-						namelist = this
-						gender = this
+#				if = {
+#					limit = {
+#						NOT = {
+#							any_galaxy_species = {
+#								has_species_flag = floret_species_of_species@event_target:old_species
+#								has_species_flag = floret_species_of_empire@root.owner
+#							}
+#						}
+#					}
+#					create_species = {
+#						# I think this property adds a suffix to the new species name, which we don't want
+#						is_mod = yes
+#						name = event_target:old_species
+#						plural = this
+#						class = this
+#						portrait = this
+#						traits = this
+#						can_be_modified = this
+#						homeworld = this
+#						namelist = this
+#						gender = this
+#						effect = {
+#							modify_species = {
+#								species = this
+#								name = event_target:old_species
+#								add_trait = trait_haustoric_implant
+#								add_traits_at_start_of_list = yes
+#								change_scoped_species = no
+#
+#								effect = {
+#									set_species_flag = floret_species_of_species@event_target:old_species
+#									set_species_flag = floret_species_of_empire@root
+#									save_event_target_as = target_species
+#									set_citizenship_type = {
+#										country = root
+#										type = citizenship_limited
+#										cooldown = no
+#									}
+#									set_living_standard = {
+#										country = root
+#										type = living_standard_chemical_bliss
+#										cooldown = no
+#									}
+#									set_military_service_type = {
+#										country = root
+#										type = military_service_none
+#										cooldown = no
+#									}
+#									set_population_controls = {
+#										country = root
+#										type = population_control_yes
+#										cooldown = no
+#									}
+#									set_colonization_controls = {
+#										country = root
+#										type = colonization_control_yes
+#										cooldown = no
+#						}
+#								}
+#							}
+#						}
+#					}
+#				}
+#				# If a modified species does exist, save them as the event target
+#				else = {
+#					random_galaxy_species = {
+#						limit = {
+#							has_species_flag = floret_species_of_species@event_target:old_species
+#							has_species_flag = floret_species_of_empire@root
+#						}
+#						save_event_target_as = target_species
+#					}
+#				}
+				planet = {
+					create_pop_group = {
+						pop_group = event_target:old_pop_group
+						species = event_target:old_species
+						size = 0
 						effect = {
+							transfer_pop_amount = {
+								source = event_target:old_pop_group
+								target = this
+								amount = 100
+							}
 							modify_species = {
 								species = this
 								add_trait = trait_haustoric_implant
 								add_traits_at_start_of_list = yes
-								change_scoped_species = no
 
 								effect = {
-									set_species_flag = floret_species_of_species@event_target:old_species
-									set_species_flag = floret_species_of_empire@root
-									save_event_target_as = target_species
 									set_citizenship_type = {
 										country = root
 										type = citizenship_limited
@@ -105,32 +164,8 @@ country_event = {
 										country = root
 										type = colonization_control_yes
 										cooldown = no
-						}
+									}
 								}
-							}
-						}
-					}
-				}
-				# If a modified species does exist, save them as the event target
-				else = {
-					random_galaxy_species = {
-						limit = {
-							has_species_flag = floret_species_of_species@event_target:old_species
-							has_species_flag = floret_species_of_empire@root
-						}
-						save_event_target_as = target_species
-					}
-				}
-				planet = {
-					create_pop_group = {
-						pop_group = event_target:old_pop_group
-						species = event_target:target_species
-						size = 0
-						effect = {
-							transfer_pop_amount = {
-								source = event_target:old_pop_group
-								target = this
-								amount = 100
 							}
 						}
 					}
@@ -1692,7 +1727,7 @@ country_event = {
  		}
  		text = domestication.30.desc
  	}
-	picture = GFX_evt_huge_monument
+	picture = GFX_evt_virtual_world
 	fire_only_once = yes
 	show_sound = event_activating_unknown_technology
 
@@ -1878,7 +1913,7 @@ planet_event = {
 						}
 					}
 				}
-				
+
 				# replace hive mind trait with haustoric hive node
 				every_owned_pop_group = {
 					limit = {
@@ -2400,6 +2435,9 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		this = {
+			is_domesticator_or_full_protectorate = yes
+		}
 		FromFromFrom = {
 			is_ship_class = shipclass_colonizer
 		}
@@ -2445,7 +2483,7 @@ country_event = {
 				modifier = {
 					factor = 1.25
 					# available jobs
-					free_jobs > 2
+					free_jobs > 200
 				}
 				modifier = {
 					factor = 0.5

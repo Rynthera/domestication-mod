@@ -41,7 +41,7 @@ country_event = {
 								has_base_skill > 1
 								num_traits = 0
 							}
-							add_trait_no_notify = random_common
+							add_trait = { trait = random_common show_message = no }
 						}
 					}
 					set_leader = event_target:new_sci
@@ -63,7 +63,7 @@ country_event = {
 						has_base_skill > 1
 						num_traits = 0
 					}
-					add_trait_no_notify = random_common
+					add_trait = { trait = random_common show_message = no }
 				}
 			}
 		}
@@ -102,7 +102,7 @@ country_event = {
 										has_base_skill > 1
 										num_traits = 0
 									}
-									add_trait_no_notify = random_common
+									add_trait = { trait = random_common show_message = no }
 								}
 							}
 						}
@@ -114,12 +114,12 @@ country_event = {
 								set_country_flag = created_first_eager_ship
 							}
 							event_target:new_explorer = {
-								add_trait_no_notify = leader_trait_meticulous
+								add_trait = { trait = leader_trait_meticulous show_message = no }
 							}
 						}
 						else = {
 							event_target:new_explorer = {
-								add_trait_no_notify = leader_trait_roamer
+								add_trait = { trait = leader_trait_roamer show_message = no }
 							}
 						}
 						set_leader = event_target:new_explorer
@@ -224,7 +224,7 @@ country_event = {
 								has_base_skill > 1
 								num_traits = 0
 							}
-							add_trait_no_notify = random_common
+							add_trait = { trait = random_common show_message = no }
 						}
 					}
 					set_leader = last_created_leader
@@ -376,7 +376,7 @@ country_event = {
 								has_base_skill > 1
 								num_traits = 0
 							}
-							add_trait_no_notify = random_common
+							add_trait = { trait = random_common show_message = no }
 						}
 					}
 					set_leader = event_target:new_adm
@@ -415,7 +415,7 @@ country_event = {
 								has_base_skill > 1
 								num_traits = 0
 							}
-							add_trait_no_notify = random_common
+							add_trait = { trait = random_common show_message = no }
 						}
 					}
 					set_leader = last_created_leader
@@ -441,7 +441,7 @@ country_event = {
 						has_base_skill > 1
 						num_traits = 0
 					}
-					add_trait_no_notify = random_common
+					add_trait = { trait = random_common show_message = no }
 				}
 			}
 		}
@@ -511,7 +511,7 @@ country_event = {
 							has_base_skill > 1
 							num_traits = 0
 						}
-						add_trait_no_notify = random_common
+						add_trait = { trait = random_common show_message = no }
 					}
 				}
 				last_created_leader = {
@@ -572,7 +572,7 @@ country_event = {
 							has_base_skill > 1
 							num_traits = 0
 						}
-						add_trait_no_notify = random_common
+						add_trait = { trait = random_common show_message = no }
 					}
 				}
 				last_created_leader = {
@@ -637,7 +637,7 @@ country_event = {
 								has_base_skill > 1
 								num_traits = 0
 							}
-							add_trait_no_notify = random_common
+							add_trait = { trait = random_common show_message = no }
 						}
 					}
 					last_created_leader = {
@@ -696,7 +696,7 @@ country_event = {
 							has_base_skill > 1
 							num_traits = 0
 						}
-						add_trait_no_notify = random_common
+						add_trait = { trait = random_common show_message = no }
 					}
 				}
 				last_created_leader = {
@@ -754,7 +754,7 @@ country_event = {
 							has_base_skill > 1
 							num_traits = 0
 						}
-						add_trait_no_notify = random_common
+						add_trait = { trait = random_common show_message = no }
 					}
 				}
 				last_created_leader = {

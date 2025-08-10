@@ -13,7 +13,7 @@ leader_trait_beeple_floret = {
 	planet_modifier = {
 		planet_jobs_food_produces_mult = 0.05
 		logistic_growth_mult = 0.025
-		job_floret_add = 1
+		job_floret_add = 100
 	}
 	sector_modifier = {
 		planet_jobs_food_produces_mult = 0.025
@@ -55,7 +55,7 @@ leader_trait_liaison_floret = {
 	planet_modifier = {
 		pop_happiness = 0.1
 		pop_citizen_happiness = -0.1
-		planet_amenities_add = 5
+		planet_amenities_add = 500
 		job_floret_add = 75
 		job_bureaucrat_add = 75
 	}
@@ -347,4 +347,46 @@ leader_trait_oracle_floret = {
 			is_domesticator_or_protectorate = yes
 		}
 	}
+}
+
+leader_trait_caretaker_floret = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		RARITY = floret
+		COUNCIL = no
+		TIER = none
+	}
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_caretaker.dds"
+	councilor_modifier = {
+		logistic_growth_mult = 0.03
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_ruler = no
+		}
+		planet_storm_devastation_mult = -0.3
+	}
+	triggered_sector_modifier = {
+		potential = {
+			is_ruler = no
+		}
+		planet_storm_devastation_mult = -0.15
+	}
+	self_modifier = {
+		species_leader_exp_gain = -0.05
+		leaders_upkeep_mult = 0.1
+	}
+	leader_class = { official }
+	opposites = {  }
+
+	leader_potential_add = {
+		from = {
+			is_domesticator_or_protectorate = yes
+		}
+	}
+	background_icon = "GFX_leader_background_destiny_1"
 }
