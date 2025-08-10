@@ -2,7 +2,7 @@ holding_domestication_center = {
 	base_buildtime = @b2_time
 	owner_type = subject_holding
 	icon = building_executive_retreat
-	base_cap_amount = 1
+	planet_limit = 1
 
 	category = amenity
 

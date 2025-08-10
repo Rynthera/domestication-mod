@@ -97,6 +97,15 @@ politician = {
 		}
 		swap_type = {
 			trigger = {
+				politician_is_augmentation_merchant = yes
+			}
+			name = augmentation_merchant
+			icon = augmentor
+			desc = job_augmentation_merchant_desc
+			weight = 20
+		}
+		swap_type = {
+			trigger = {
 				politician_is_lead_bureaucrat = yes
 			}
 			name = lead_bureaucrat
@@ -139,7 +148,10 @@ politician = {
 			trigger = {
 				exists = planet
 				planet = {
-					politician_is_merchant = yes
+					OR = {
+						politician_is_merchant = yes
+						politician_is_augmentation_merchant = yes
+					}
 				}
 			}
 			unity = -2
@@ -178,7 +190,7 @@ politician = {
 			}
 			engineering_research = 4
 		}
-		##LEad Bureaucrat
+		##Lead Bureaucrat
 		produces = {
 			trigger = {
 				exists = planet

@@ -594,7 +594,7 @@
  dom_paragon.246.dom:0 "So, you're a good little beeper who likes taking care of cute sophonts?"
  dom_paragon.246.dom.response:0 "§EI-- I-- am--§!\n\n§E*BEEP!*§!"
  dom_paragon.247.name:0 "A Very Useful Beeper"
- dom_paragon.247.desc:0 "§Y[ethic_leader.GetName]§! "
+ dom_paragon.247.desc:0 "Keeping shipfulls of sophonts alive for centuries by oneself is a daunting task, even for [root.GetSpeciesNamePlural]! While crises of that magnitude are rare in the [root.GetName], [ethic_leader.GetName], now §Y[new_floret.GetName]§!, has agreed to work with §Y[new_owner.GetName]§! to help develop infrastructure than can keep sophonts safe, no matter what the universe throws at it."
  dom_paragon.247.a:0 "An extremely good beeper!"
 
  dom_nwo.2167.a:0 "We must intervene to prevent anyone from coming to harm."
@@ -613,3 +613,7 @@
  dom_ancrel.1000.name:0 "Ancient Sophont, New Purpose"
  dom_ancrel.1000.desc:0 "§L...As you can see, unscheduled wellness checks have decreased by 23%, while voluntary domestications are up 9%. Furthermore, I have noted a 36% reduction in feralist terminology in chat applications.§!\n\n§Y[new_owner.GetName]§! listens patiently while [new_owner.GetHisHer] floret delivers [new_floret.GetHisHer] report on sophont living conditions. While it would have been incredibly irresponsible to put §Y$NAME_Oracle$§! - now §Y[new_floret.GetName]§! - in charge of a whole sector as [new_floret.GetHeShe] requested, [new_floret.GetHisHer] owner has graciously allowed [new_floret.GetHimHer] to make a few improvements to our habitat AI systems - with proper supervision, of course.\n\n§Y[new_floret.GetName]§! has adapted marvelously to [new_floret.GetHisHer] new responsibilities, which include keeping other florets company while their owners are out, making sure that sophonts are getting their proper nutrients, and taking a few minutes every day to verbally acknowledge [new_floret.GetHisHer] cuteness."
  dom_ancrel.1000.a:0 "Adorable!"
+
+ dom_marauder.13.name:0 "A Very Feral Marauder"
+ dom_marauder.13.desc:0 "Glowing [new_floret.Species.GetEyeNamePlural] scan the darkness, waiting for prey to draw near. In a flash, the predator pounces, [new_floret.Species.GetToothNamePlural] sinking into its prey's [new_owner.Species.GetNeckName]. A [new_owner.Species.GetHandName] appears from out of nowhere, a single needle piercing the predator's [new_floret.Species.GetSkinType].\n\n§Y[new_owner.GetName]§! sighs as [new_owner.GetHisHer] floret drifts off to sleep. [new_owner.GetHisHerCap] friends told [new_owner.GetHimHer] that [new_floret.Species.GetNamePlural] can be a [new_owner.Species.GetHandName]full, even if they're particularly adorable when they're sleeping. You can take a [new_floret.Species.GetName] like §Y[new_floret.GetName]§! out of [new_floret.GetHisHer] marauder enclave, but you can't take the marauder out of the [new_floret.Species.GetName]."
+ dom_marauder.13.a:0 "So fearsome!"

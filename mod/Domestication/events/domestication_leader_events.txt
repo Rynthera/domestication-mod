@@ -185,7 +185,7 @@ country_event = {
 
 			floret_count_increment = yes
 
-			add_trait = leader_trait_warp_eng_floret
+			add_trait = { trait = leader_trait_warp_eng_floret }
 
 			## generate new leader of species matching primary species of defeated fleet
 			owner = {
@@ -200,8 +200,8 @@ country_event = {
 					}
 					last_created_leader = {
 						save_event_target_as = new_floret
-						add_trait = leader_trait_warp_eng_floret
-						add_trait = leader_trait_floret_immortal
+						add_trait = { trait = leader_trait_warp_eng_floret }
+						add_trait = { trait = leader_trait_floret_immortal }
 					}
 				}
 				floret_rename_single = yes
@@ -332,58 +332,58 @@ country_event = {
 						event_target:new_owner = {
 							if = {
 								limit = { has_leader_flag = gained_leader_trait_cutie_floret }
-								event_target:new_floret = { add_trait = leader_trait_cutie_floret }
+								event_target:new_floret = { add_trait = { trait = leader_trait_cutie_floret } }
 							}
 							if = {
 								limit = { has_leader_flag = gained_leader_trait_beeple_floret }
-								event_target:new_floret = { add_trait = leader_trait_beeple_floret }
+								event_target:new_floret = { add_trait = { trait = leader_trait_beeple_floret } }
 							}
 							if = {
 								limit = { has_leader_flag = gained_leader_trait_distracted_floret }
-								event_target:new_floret = { add_trait = leader_trait_distracted_floret }
+								event_target:new_floret = { add_trait = { trait = leader_trait_distracted_floret } }
 							}
 							if = {
 								limit = { has_leader_flag = gained_leader_trait_liaison_floret }
-								event_target:new_floret = { add_trait = leader_trait_liaison_floret }
+								event_target:new_floret = { add_trait = { trait = leader_trait_liaison_floret } }
 							}
 							if = {
 								limit = { has_leader_flag = gained_leader_trait_brainslug_gov }
-								event_target:new_floret = { add_trait = leader_trait_brainslug_floret }
+								event_target:new_floret = { add_trait = { trait = leader_trait_brainslug_floret } }
 							}
 							if = {
 								limit = { has_leader_flag = gained_leader_trait_brainslug_adm }
-								event_target:new_floret = { add_trait = leader_trait_brainslug_floret }
+								event_target:new_floret = { add_trait = { trait = leader_trait_brainslug_floret } }
 							}
 							if = {
 								limit = { has_leader_flag = gained_leader_trait_brainslug_gen }
-								event_target:new_floret = { add_trait = leader_trait_brainslug_floret }
+								event_target:new_floret = { add_trait = { trait = leader_trait_brainslug_floret } }
 							}
 							if = {
 								limit = { has_leader_flag = gained_leader_trait_brainslug_sci }
-								event_target:new_floret = { add_trait = leader_trait_brainslug_floret }
+								event_target:new_floret = { add_trait = { trait = leader_trait_brainslug_floret } }
 							}
 							if = {
 								limit = { has_leader_flag = gained_leader_trait_class_o_floret }
-								event_target:new_floret = { add_trait = leader_trait_class_o_floret }
+								event_target:new_floret = { add_trait = { trait = leader_trait_class_o_floret } }
 							}
 							if = {
 								limit = { has_leader_flag = gained_leader_trait_historian_floret }
-								event_target:new_floret = { add_trait = leader_trait_historian_floret }
+								event_target:new_floret = { add_trait = { trait = leader_trait_historian_floret } }
 							}
 							if = {
 								limit = { has_leader_flag = gained_leader_trait_musician_floret }
-								event_target:new_floret = { add_trait = leader_trait_musician_floret }
+								event_target:new_floret = { add_trait = { trait = leader_trait_musician_floret } }
 							}
 							if = {
 								limit = { has_leader_flag = gained_leader_trait_underground_gen }
-								event_target:new_floret = { add_trait = leader_trait_underground_floret }
+								event_target:new_floret = { add_trait = { trait = leader_trait_underground_floret } }
 							}
 							if = {
 								limit = { has_leader_flag = gained_leader_trait_underground_gov }
-								event_target:new_floret = { add_trait = leader_trait_underground_floret }
+								event_target:new_floret = { add_trait = { trait = leader_trait_underground_floret } }
 							}
 						}
-						add_trait = leader_trait_floret_immortal
+						add_trait = { trait = leader_trait_floret_immortal }
 					}
 				}
 
@@ -484,13 +484,13 @@ country_event = {
 				}
 				last_created_leader = {
 					save_event_target_as = new_floret
-					add_trait = leader_trait_pirate_floret
-					add_trait = leader_trait_floret_immortal
+					add_trait = { trait = leader_trait_pirate_floret }
+					add_trait = { trait = leader_trait_floret_immortal }
 				}
 			}
 			floret_count_increment = yes
 
-			add_trait = leader_trait_pirate_floret
+			add_trait = { trait = leader_trait_pirate_floret }
 
 			#event_target:new_floret = {
 			#	set_owner = event_target:floret_country
@@ -585,12 +585,12 @@ country_event = {
 			#}
 			floret_count_increment = yes
 
-			add_trait = leader_trait_admiral_floret
+			add_trait = { trait = leader_trait_admiral_floret }
 
 			event_target:new_floret = {
 				set_owner = event_target:floret_country
-				add_trait = leader_trait_admiral_floret
-				add_trait = leader_trait_floret_immortal
+				add_trait = { trait = leader_trait_admiral_floret }
+				add_trait = { trait = leader_trait_floret_immortal }
 			}
 
 			owner = {
@@ -1038,7 +1038,7 @@ leader_event = {
 			#	key = domestication.bloom_name_set
 			#	variable_string = "\\[root.GetName\\]"
 			#}
-			add_trait = leader_trait_floret_immortal
+			add_trait = { trait = leader_trait_floret_immortal }
 			set_variable = {
 				which = bloom_id
 				value = event_target:bloom_country.bloom_index
@@ -1312,26 +1312,26 @@ country_event = {
 						root = {
 							if = {
 								limit = { has_country_flag = disavowed_floret_attache }
-								event_target:new_floret = { add_trait = leader_trait_attache_floret }
-								event_target:new_owner = { add_trait = leader_trait_attache_floret }
+								event_target:new_floret = { add_trait = { trait = leader_trait_attache_floret } }
+								event_target:new_owner = { add_trait = { trait = leader_trait_attache_floret } }
 							}
 							if = {
 								limit = { has_country_flag = disavowed_floret_economist }
-								event_target:new_floret = { add_trait = leader_trait_economist_floret }
-								event_target:new_owner = { add_trait = leader_trait_economist_floret }
+								event_target:new_floret = { add_trait = { trait = leader_trait_economist_floret } }
+								event_target:new_owner = { add_trait = { trait = leader_trait_economist_floret } }
 							}
 							if = {
 								limit = { has_country_flag = disavowed_floret_officer }
-								event_target:new_floret = { add_trait = leader_trait_officer_floret }
-								event_target:new_owner = { add_trait = leader_trait_officer_floret }
+								event_target:new_floret = { add_trait = { trait = leader_trait_officer_floret } }
+								event_target:new_owner = { add_trait = { trait = leader_trait_officer_floret } }
 							}
 							if = {
 								limit = { has_country_flag = disavowed_floret_scientist }
-								event_target:new_floret = { add_trait = leader_trait_academic_floret }
-								event_target:new_owner = { add_trait = leader_trait_academic_floret }
+								event_target:new_floret = { add_trait = { trait = leader_trait_academic_floret } }
+								event_target:new_owner = { add_trait = { trait = leader_trait_academic_floret } }
 							}
 						}
-						add_trait = leader_trait_floret_immortal
+						add_trait = { trait = leader_trait_floret_immortal }
 					}
 				}
 
@@ -1827,11 +1827,11 @@ country_event = {
 			## Up to 2 florets - for the moment
 			floret_count_increment = yes
 
-			add_trait = leader_trait_warform_floret
+			add_trait = { trait = leader_trait_warform_floret }
 
 			#event_target:new_floret = {
 			#	set_name = "NAME_S8751"
-			#	add_trait = leader_trait_floret_immortal
+			#	add_trait = { trait = leader_trait_floret_immortal }
 			#	set_owner = event_target:floret_country
 			#}
 
@@ -1880,8 +1880,8 @@ country_event = {
 					target = event_target:warform_leader
 					class = commander
 					effect = {
-						add_trait = leader_trait_floret_immortal
-						add_trait = leader_trait_warform_floret
+						add_trait = { trait = leader_trait_floret_immortal }
+						add_trait = { trait = leader_trait_warform_floret }
 						save_event_target_as = new_floret
 					}
 				}
@@ -1894,15 +1894,15 @@ country_event = {
 					skill = 1
 					effect = {
 						save_event_target_as = new_floret
-						add_trait = leader_trait_warform_floret
-						add_trait = leader_trait_floret_immortal
+						add_trait = { trait = leader_trait_warform_floret }
+						add_trait = { trait = leader_trait_floret_immortal }
 						set_age = 1578
 					}
 				}
 				#last_created_leader = {
 				#	save_event_target_as = new_floret
-				#	add_trait = leader_trait_ahab_floret
-				#	add_trait = leader_trait_floret_immortal
+				#	add_trait = { trait = leader_trait_ahab_floret }
+				#	add_trait = { trait = leader_trait_floret_immortal }
 				#}
 			}
 		}
@@ -1979,7 +1979,7 @@ country_event = {
 
 			floret_count_increment = yes
 
-			add_trait = leader_trait_dathnak_floret
+			add_trait = { trait = leader_trait_dathnak_floret }
 
 			## generate new leader of species matching primary species of defeated fleet
 			owner = {
@@ -1994,8 +1994,8 @@ country_event = {
 					}
 					last_created_leader = {
 						save_event_target_as = new_floret
-						add_trait = leader_trait_dathnak_floret
-						add_trait = leader_trait_floret_immortal
+						add_trait = { trait = leader_trait_dathnak_floret }
+						add_trait = { trait = leader_trait_floret_immortal }
 					}
 				}
 
@@ -2041,7 +2041,7 @@ country_event = {
 
 			floret_count_increment = yes
 
-			add_trait = leader_trait_brainslug_floret
+			add_trait = { trait = leader_trait_brainslug_floret }
 
 			## generate new leader of species of volunteer
 			owner = {
@@ -2058,8 +2058,8 @@ country_event = {
 						}
 					}
 					last_created_leader = {
-						add_trait = leader_trait_brainslug_floret
-						add_trait = leader_trait_floret_immortal
+						add_trait = { trait = leader_trait_brainslug_floret }
+						add_trait = { trait = leader_trait_floret_immortal }
 					}
 				}
 				floret_rename_brainslug = yes
@@ -2132,7 +2132,7 @@ country_event = {
 			## Up to 2 florets - for the moment
 			floret_count_increment = yes
 
-			add_trait = leader_trait_stranded_floret
+			add_trait = { trait = leader_trait_stranded_floret }
 
 			#event_target:new_floret = {
 			#	set_name = "NAME_S8751"
@@ -2199,7 +2199,7 @@ country_event = {
 			## Up to 2 florets - for the moment
 			floret_count_increment = yes
 
-			add_trait = leader_trait_racket_floret
+			add_trait = { trait = leader_trait_racket_floret }
 
 			#event_target:new_floret = {
 			#	set_name = "NAME_S8751"
@@ -2265,8 +2265,8 @@ country_event = {
 			}
 			last_created_leader = {
 				save_event_target_as = new_floret
-				add_trait = leader_trait_cryopod_floret
-				add_trait = leader_trait_floret_immortal
+				add_trait = { trait = leader_trait_cryopod_floret }
+				add_trait = { trait = leader_trait_floret_immortal }
 			}
 		}
 
@@ -2284,7 +2284,7 @@ country_event = {
 			## Up to 2 florets - for the moment
 			floret_count_increment = yes
 
-			add_trait = leader_trait_cryopod_floret
+			add_trait = { trait = leader_trait_cryopod_floret }
 
 			#event_target:new_floret = {
 			#	set_name = "NAME_S8751"
@@ -2376,8 +2376,8 @@ country_event = {
 			}
 			last_created_leader = {
 				save_event_target_as = new_floret
-				add_trait = leader_trait_ahab_floret
-				add_trait = leader_trait_floret_immortal
+				add_trait = { trait = leader_trait_ahab_floret }
+				add_trait = { trait = leader_trait_floret_immortal }
 			}
 		}
 
@@ -2394,7 +2394,7 @@ country_event = {
 			## Up to 2 florets - for the moment
 			floret_count_increment = yes
 
-			add_trait = leader_trait_ahab_floret
+			add_trait = { trait = leader_trait_ahab_floret }
 
 			#event_target:new_floret = {
 			#	set_name = "NAME_S8751"

@@ -58,7 +58,10 @@ set_starting_governor_effect = {
 									has_base_skill > 1
 									num_traits = 0
 								}
-								add_trait_no_notify = random_common
+								add_trait = {
+									trait = random_common
+									show_message = no
+								}
 							}
 							save_event_target_as = new_governor
 						}

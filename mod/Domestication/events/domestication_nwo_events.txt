@@ -158,7 +158,7 @@ country_event = {
 		#}
 		from.owner = {
 			create_leader = {
-				class = official
+				class = commander
 				species = from.owner.species
 				name = random
 				skill = 4
@@ -171,6 +171,11 @@ country_event = {
 			}
 			set_leader = last_created_leader
 		}
+		hidden_effect = {
+			from.owner = {
+				save_global_event_target_as = dom_nwo_country
+			}
+		}
 	}
 
 	option = { # Reveal presence
@@ -180,7 +185,7 @@ country_event = {
 			#icon_background = GFX_situation_approach_bg_yellow
 			#text = set_situation_approach_icon_text
 		#}
-    icon = {
+		icon = {
 			icon = GFX_domesticators_icon
 			text = dialog_domesticator
 		}
@@ -194,16 +199,11 @@ country_event = {
 				cooldown = yes
 			}
 		}
-    enable_special_project = {
+		enable_special_project = {
 			name = "domestication_nwo_project"
 			location = from.owner.capital_scope
 			owner = root
 		}
-    hidden_effect = {
-      from.owner = {
-       save_global_event_target_as = dom_nwo_country
-      }
-    }
 		#event_target:nwo_situation = {
 		#	set_situation_approach = approach_aid_rebels
 		#}

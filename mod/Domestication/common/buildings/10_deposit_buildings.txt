@@ -5,7 +5,7 @@
 building_mote_harvesters = {
 	base_buildtime = @b1_time
 	icon = building_mote_harvesting_traps
-	base_cap_amount = 1
+	planet_limit = 1
 
 	category = resource
 
@@ -44,7 +44,7 @@ building_mote_harvesters = {
 building_gas_extractors = {
 	base_buildtime = @b1_time
 	icon = building_gas_extractors
-	base_cap_amount = 1
+	planet_limit = 1
 
 	category = resource
 
@@ -83,7 +83,7 @@ building_gas_extractors = {
 
 building_crystal_mines = {
 	base_buildtime = @b1_time
-	base_cap_amount = 1
+	planet_limit = 1
 
 	category = resource
 
@@ -123,7 +123,7 @@ building_crystal_mines = {
 
 building_betharian_power_plant = {
 	base_buildtime = @b1_time
-	base_cap_amount = 1
+	planet_limit = 1
 
 	category = resource
 
@@ -171,7 +171,7 @@ building_betharian_power_plant = {
 
 building_xeno_zoo = {
 	base_buildtime = @b1_time
-	base_cap_amount = 1
+	planet_limit = 1
 	category = research
 
 	building_sets = {

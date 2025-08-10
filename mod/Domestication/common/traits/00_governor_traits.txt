@@ -2361,8 +2361,7 @@ leader_trait_mediator = {
 		potential = {
 			exists = planet
 		}
-		pop_entertainer_bonus_workforce_mult = 0.02 ##TODO AUG-51706 investigate if code can fix ouput modifier not working
-		pop_maintenance_drone_bonus_workforce_mult = 0.02
+		entertainer_jobs_bonus_workforce_mult = 0.02
 		mult = planet.value:species_on_planet
 	}
 	triggered_planet_modifier = {
@@ -2376,8 +2375,7 @@ leader_trait_mediator = {
 		potential = {
 			exists = planet
 		}
-		pop_entertainer_bonus_workforce_mult = 0.01 ##TODO AUG-51706 investigate if code can fix ouput modifier not working
-		pop_maintenance_drone_bonus_workforce_mult = 0.02
+		entertainer_jobs_bonus_workforce_mult = 0.01
 		mult = planet.value:species_on_planet
 	}
 	triggered_sector_modifier = {
@@ -2412,10 +2410,10 @@ leader_trait_shroud_preacher = {
 		}
 	}
 	planet_modifier = {
-		planet_jobs_produces_mult = 0.25
+		psionic_pop_bonus_workforce_mult = 0.25
 	}
 	sector_modifier = {
-		planet_jobs_produces_mult = 0.125
+		psionic_pop_bonus_workforce_mult = 0.125
 	}
 	leader_potential_add = {
 		has_paragon_dlc = yes
